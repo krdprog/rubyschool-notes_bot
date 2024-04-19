@@ -5,7 +5,7 @@ token = ''
 Telegram::Bot::Client.run(token) do |bot|
   bot.listen do |message|
     case message.text
-    when /\A\d+\z/ # 1..50
+    when /\A\d+\z/ # is integer
       lesson_num = message.text.to_i
 
       if (1..50).include?(lesson_num)
